@@ -1,0 +1,19 @@
+.toolBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 0 4rem;
+}
+
+@media (max-width: 768px) {
+  .toolBar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+
+
+}

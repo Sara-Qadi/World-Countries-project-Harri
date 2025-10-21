@@ -1,0 +1,32 @@
+body{
+  margin: 0;
+  font-family: 'Nunito Sans', sans-serif;
+    background-color: var(--bg);
+  color: var(--text);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #fafafa;
+  --element: #ffffff;
+  --text: #111517;
+  --input: #858585;
+   --border: #e5e5e5;
+}
+
+:root[data-theme="dark"] {
+  --bg: #202c37;
+  --element: #2b3945;
+  --text: #ffffff;
+  --input: #ffffff;
+  --border: #2b3945;
+}
+
+
+
+
+
+

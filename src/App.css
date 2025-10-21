@@ -1,0 +1,23 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--element);
+  padding: 0px 100px;
+  border-bottom: 1px solid var(--border);
+  
+
+}
+
+@media (max-width: 768px) {
+  .navbar {
+   font-size: 14px;
+     padding: 0px 20px;
+  }
+  h1{
+    font-size: 14px;
+  }
+
+
+
+}

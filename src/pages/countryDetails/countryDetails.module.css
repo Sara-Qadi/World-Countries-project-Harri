@@ -1,0 +1,149 @@
+.container {
+  padding: 4rem;
+  margin: 0 auto;
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 2.2rem;
+  background-color: var(--element);
+  color: var(--text);
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  font-size: 0.95rem;
+  margin-bottom: 6rem;
+  transition: box-shadow 0.2s;
+}
+
+.backButton:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 5rem;
+  flex-wrap: wrap;
+}
+
+.flagContainer {
+  flex: 1; 
+  margin-top: -2rem;
+}
+
+.flag {
+  width: 90%;
+  height: 400px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.details {
+  flex: 1;          
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.countryName {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text);
+}
+
+.infoGrid {
+  display: flex;
+  gap: 4rem;
+}
+
+.infoColumn {
+  flex: 1;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.infoItem {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.infoItem strong {
+  font-weight: 600;
+}
+
+.borderSection {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.borderLabel {
+  font-weight: 600;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  padding-top: 0.5rem;
+  color: var(--text);
+}
+
+.borderCountries {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.borderCountry {
+  padding: 0.4rem 1.5rem;
+  background-color: var(--element);
+  color: var(--text);
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: box-shadow 0.2s;
+}
+
+.borderCountry:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .flagContainer,
+  .details {
+    flex: 1;
+    width: 100%;
+  }
+   .flagContainer img {
+  height:250px;
+  }
+
+  .infoGrid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .borderSection {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
