@@ -15,9 +15,9 @@ export default function CountryCard({ name, flag, population, region, capital }:
         <CardImage src={flag} alt={`${name} flag`} />
         <CardBody>
           <CardTitle>{name}</CardTitle>
-          <CardText><strong>Population:</strong> {population.toLocaleString()}</CardText>
-          <CardText><strong>Region:</strong> {region}</CardText>
-          <CardText><strong>Capital:</strong> {capital}</CardText>
+          <CardText><strong>Population:</strong> <span className={styles.value}>{population.toLocaleString()}</span></CardText>
+          <CardText><strong>Region:</strong> <span className={styles.value}>{region}</span></CardText>
+          <CardText><strong>Capital:</strong> <span className={styles.value}>{capital}</span></CardText>
         </CardBody>
       </Card>
     </Link>
