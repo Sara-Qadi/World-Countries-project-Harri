@@ -7,7 +7,7 @@
 
 .cardText strong{
   font-size: 1rem;
-  color: #373739;
+  color: var(--content);
   
 }
 

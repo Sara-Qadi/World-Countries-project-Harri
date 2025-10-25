@@ -15,6 +15,7 @@ body{
   --text: #111517;
   --input: #858585;
    --border: #e5e5e5;
+   --content: #373739;
 }
 
 :root[data-theme="dark"] {
@@ -23,6 +24,7 @@ body{
   --text: #ffffff;
   --input: #ffffff;
   --border: #2b3945;
+  --content: #ffffff;
 }
 
 

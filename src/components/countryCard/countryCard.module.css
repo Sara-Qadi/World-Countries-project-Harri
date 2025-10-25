@@ -4,5 +4,5 @@
 }
 
 .value {
-color: #626262;
+color: var(--content);
 }
