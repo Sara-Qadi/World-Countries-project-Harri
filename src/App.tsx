@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import ThemeToggle from "./ui/themeToggle/themeToggle";
 import "./App.css";
 import HomePageContainer from "./pages/homePage/homePageContainer";
@@ -6,7 +6,7 @@ import CountryDetailsContainer from "./pages/countryDetails/countryDetailsContai
 
 function App() {
   return (
-    <Router>
+    <>
       <header className="navbar">
         <h1>Where in the world?</h1>
         <ThemeToggle />
@@ -15,8 +15,9 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePageContainer />} />
         <Route path="/country/:name" element={<CountryDetailsContainer />} />
+        <Route path="*" element={<HomePageContainer />} /> {/* fallback */}
       </Routes>
-    </Router>
+    </>
   );
 }
 
