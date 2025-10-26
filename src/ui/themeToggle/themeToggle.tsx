@@ -1,28 +1,23 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { IoMoonOutline, IoSunnyOutline } from "react-icons/io5"; 
 import styles from "./ThemeToggle.module.css";
 
-const savedTheme = localStorage.getItem("darkMode");
-if (savedTheme !== null) {
-  document.documentElement.setAttribute(
-    "data-theme",
-    JSON.parse(savedTheme) ? "dark" : "light"
-  );
-}
-
 function ThemeToggle() {
-  const [darkMode, setDarkMode] = useState(
-    savedTheme ? JSON.parse(savedTheme) : false
-  );
+  const [darkMode, setDarkMode] = useState(() => {
+    const saved = localStorage.getItem("darkMode");
+    return saved ? JSON.parse(saved) : false;
+  });
 
-  const toggleDarkMode = () => {
-    const newMode = !darkMode;
-    setDarkMode(newMode);
-    localStorage.setItem("darkMode", JSON.stringify(newMode));
+  useEffect(() => {
     document.documentElement.setAttribute(
       "data-theme",
-      newMode ? "dark" : "light"
+      darkMode ? "dark" : "light"
     );
+    localStorage.setItem("darkMode", JSON.stringify(darkMode));
+  }, [darkMode]);
+
+  const toggleDarkMode = () => {
+    setDarkMode((prev: boolean) => !prev); 
   };
 
   return (
