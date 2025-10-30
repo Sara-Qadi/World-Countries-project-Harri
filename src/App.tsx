@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePageContainer />} />
         <Route path="/country/:name" element={<CountryDetailsContainer />} />
-        <Route path="*" element={<HomePageContainer />} /> {/* fallback */}
+        <Route path="*" element={<HomePageContainer />} /> 
       </Routes>
     </>
   );
